@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=0.5">
-    <title>CHARACTER CARDS</title>
-    <style>
+  <head> 
+  <meta charset="UTF-8">
+  <title> CHARCARD </title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <style>
+  
+  html { font-size: 16px; }
+  
+  body { margin: 0 0 1rem 0; padding: 0; background: #444444; }
+  
+  header { display: flex; background: #888888; border-bottom: 0.4em solid #ffffff; border-bottom-left-radius: 30%; border-bottom-right-radius: 30%; height: 4r
+  em; justify-content: center; align-items: center; margin: 0 0 1em 0; }
+  
+  main { display: flex; flex-direction: column; }
+  
+  .row { display: flex; flex-direction: row; height: clamp(11rem,20vh,15rem); margin: 0.4rem 0 0 0; padding: 0 0.5rem 0 0.5rem; gap: 0.5rem; align-items: center; }
+  
+  .card { display: flex; flex-direction: column; align-items: center; height: clamp(10em,19vh,14em); width: clamp(6.5em,13vh,9.17em); background: #000000; border: 1px solid #ffcc55; border-radius: 5px; transition: all 0.15s; padding: 0.5em; box-sizing: border-box; }
+  
+  .traits { display: block; height: 2.5rem; width: 5.5rem; border: 0.05em solid #ffcc55; border-radius: 5px; background: #99ccff; padding: 0.1em; }
+  
+  .ultraits { margin-top: 0.1em; margin-left: 3.4em; line-height: 1.3em; color: #000000; }
+  
+  .traitclan { display: flex; margin-top: 0.3em; }
+  
+  .clan { height: 1em; width: 1em; object-fit: cover; border-radius: 50%; margin-top: 0.1em; }
+  
+  h6 { font-size: 0.3em; margin: 0; color: #ff0000; }
+  
+  hr { border: 0.05em solid #000000; width: 5.4em; margin: 0 0 0 0;  }
+  
+  img { height: 3em; width: 5.5em; object-fit: cover; border: 0.05em solid #ffcc55; border-radius: 5px; }
+
+  h2 { font-size: 0.5em;  color: #cc9933; margin-top: 0.5em;  }
+  
+  ul { color: #ffffff; font-size: 0.25em;
+        margin-top: 1em; line-height: 1.5em; }
+        
+  li { margin-left: -12em; text-indent: -0.5em; }
+  
+  
+  @media ( orientation: portrait ) { .card.active { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(3); z-index: 999; } }
+  
+  @media ( orientation: landscape ) { .card.active { position: sticky; bottom: 30%%; left: 50%; transform: translate(-50% , 50%) scale(3); z-index: 999; } }
+  
     
+<<<<<<< HEAD
       body { background: #000000; padding: 0; font-size: clamp(1rem,1rem,1rem); } 
       
       header { display: flex; justify-content: center; background: #aaaaaa; margin-bottom: 5rem;}
@@ -35,75 +77,94 @@
       #oborder { border: 1px solid #ea5f00; border-radius: 50%; padding: 1rem; background: #ea5f00; }
       
     </style>
+=======
+  </style>
+  
+>>>>>>> 128949f (change web ui and layout')
   </head>
   <body>
-    <header><h1>CHARACTER I.D</h1></header>
+    
+    <header> <h1> CHARACTER I.D </h1>
+    </header>
     
     <main>
       
-      
-      <section>
-        <div id="center">
-        <div id="card">
-        <img src="Characters/Claricedigi.webp" alt="Clarice">
-        <h2><strong>~Clarice Von Spectrival~</strong></h2>
+      <section class="row">
+        <section class="card">
+          <img src="Characters/Claricedigi.webp">
+          <h2>~Clarice Von Spectrival~</h2>
           <ul>
-              <li>Eldest child of Family Spectrival
-            </li>
-            <li>
-                Enrolled to Arc Aether Academy (AAA)
-            </li>
-            <li>
-              Specialized in holographic projection<br>
-              And can manifest them physically
-            </li>
-        </ul>
-        <div id="skillbox">
-          <h3>• TRAITS •</h3>
-<hr>
-          <div id="skills">
-          <ul>
-            <li>Serious</li>
-            <li>Rule Oriented</li>
-            <li>Logical</li>
+            <li> A noble from Elmar </li>
+            <li> Enrolled to Arc Aether      Academy (AAA) </li>
+            <li> Studies holographic projection </li>
           </ul>
-          <div id="oborder">
-          <img id="clan" src="Clans/Star.webp">
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
+          
+          <div class="traits">
+            <h6>•TRAITS•</h6>
+          <hr>
+          <div class="traitclan">
+          <ul class="ultraits">
+            <li>Strict</li>
+            <li>Organized</li>
+            <li>Rigid</li>
+          </ul>
+          
+          <img class="clan" src="Clans/star.webp">
+          
+          </div>
+          </div>
+          
+        </section>
+        
+         <section class="card">
+          <img src="Characters/VesnAlice.webp">
+          <h2>~Alice & Vesper~</h2>
+          <ul>
+            <li> A noble from Vindis </li>
+            <li> Vesper, A Familiar of Alice's Father </li>
+            <li> Enrolled to Arc Aether Academy (AAA) </li>
+            <li> Studies holographic projection </li>
+          </ul>
+          
+          <div class="traits">
+            <h6>•TRAITS•</h6>
+          <hr>
+          <div class="traitclan">
+          <ul class="ultraits">
+            <li>Enthusiastic</li>
+            <li>Playfull</li>
+            <li>Witty</li>
+          </ul>
+          
+          <img class="clan" src="Clans/hand.webp">
+          
+          </div>
+          </div>
+          
+        </section>
+        
       </section>
       
-      <section>
-        <div id="center">
-          <div id="card">
-            <img src="Characters/VesnAlice.webp" alt="VesperandAlice">
-            <h2> <strong>~Alice & Vesper~</strong></h2>
-            <ul>
-              <li> Alice Von Oberhaupt </li>
-              <li> Vesper Familiar of Alice's Father </li>
-               <li>Enrolled at Arc Aether Academy (AAA) </li>
-               <li>Elemental And Summon Type</li>
-            </ul>
-              <div id="skillbox"> 
-              <h3>• TRAITS •</h3>
-<hr>              
-              <div id="skills">
-                <ul>
-                  <li>Empathetic</li>
-                  <li>Playfull</li>
-                  <li>Witty</li>
-                </ul>
-                <div id="oborder">
-                  <img id="clan" src="Clans/Hand.webp">
-          </div>
-          </div>
-          </div>
-          </div>
-          </div>
-      </section>
+    
     </main>
+    <div id="layer"></div>
+    <script>
+      
+      document.addEventListener('click', (cardbutton) => 
+      { const card = cardbutton.target.closest('.card');
+      if (!card) return;
+      
+      if (card.classList.contains('active')) { card.classList.remove('active'); return; }
+      
+      document.querySelectorAll('.card').forEach(card => card.classList.remove('active')); card.classList.add('active');
+      });
+      
+    </script>
+    
   </body>
+<<<<<<< HEAD
 </html>
+=======
+  </html>
+  
+>>>>>>> 128949f (change web ui and layout')
